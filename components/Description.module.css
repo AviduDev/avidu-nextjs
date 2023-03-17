@@ -1,0 +1,15 @@
+.section {
+    max-width: 100%;
+    background-color: antiquewhite;
+    border-top-right-radius: 3vw;
+    border-top-left-radius: 3vw;
+    overflow: hidden;
+    padding: 10vw 0 10vw 0;
+}
+
+.dscContainer h1 {
+    color: #1d1d1d;
+    font-size: 12vw;
+    text-align: center;
+    word-wrap: break-word;
+}

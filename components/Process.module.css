@@ -1,0 +1,54 @@
+.sectioin {
+  background-color: antiquewhite;
+  border-radius: 3vw;
+  padding: 10vw 0 10vw 0;
+}
+
+.sectioin h2 {
+  text-align: center;
+  padding: 0 0 4vw 0;
+  
+}
+
+.process {
+  gap: 1vw;
+  display: grid;
+  grid-template-columns: 2fr 1fr;
+  min-height: 50vw;
+  width: 100%;
+  padding: 3vw;
+}
+
+.pcsTtl {
+  padding: 3vw;
+  border-radius: 3vw;
+  color: antiquewhite;
+  background-color: #1d1d1d;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.pcsDsc {
+  padding: 3vw;
+  border-radius: 3vw;
+  color: antiquewhite;
+  background-color: #1d1d1d;
+  display: flex;
+  flex-direction: column;
+  justify-content: end;
+}
+
+
+/* Small devices (landscape phones, 576px and up) */
+@media (max-width: 576px) {
+  .process {
+    gap: 1vw;
+    display: grid;
+    grid-template-columns: 1fr;
+    min-height: 100vw;
+    width: 100%;
+    padding: 3vw;
+  }
+  
+}

@@ -1,0 +1,26 @@
+.marqueeTitle {
+    color: antiquewhite;
+    font-size: 10vw;
+}
+
+.marquee {
+    width: 100%;
+    margin: 0 auto;
+    white-space: nowrap;
+    overflow: hidden;
+}
+
+@keyframes marquee-animation {
+    0% {
+        transform: translate(0, 0);
+    }
+
+    100% {
+        transform: translate(-100%, 0);
+    }
+}
+
+.marquee h2 {
+    display: inline-block;
+    animation: marquee-animation 100s linear infinite;
+}

@@ -1,0 +1,17 @@
+
+.model {
+    overflow: hidden;
+    .first {
+      margin-right: 72px;
+    }
+    span {
+      display: inline-block;
+      position: relative;
+      font-weight: 400;
+      font-size: 224px;
+      font-family: "Maragsa";
+      @media (max-width: 1440px) {
+        font-size: 128px;
+      }
+    }
+  }
