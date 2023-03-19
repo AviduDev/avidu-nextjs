@@ -1,5 +1,5 @@
 .section {
-    max-width: 100%;
+    width: 100%;
     background-color: antiquewhite;
     border-top-right-radius: 3vw;
     border-top-left-radius: 3vw;
@@ -12,4 +12,16 @@
     font-size: 12vw;
     text-align: center;
     word-wrap: break-word;
+}
+
+.centerText {
+    text-align: center;
+}
+
+.revealText {
+    text-align: center;
+    font-size: 12vw;
+    font-weight: bold;
+    text-transform: uppercase;
+    color: #1d1d1d10;
 }

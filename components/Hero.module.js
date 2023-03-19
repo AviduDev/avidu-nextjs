@@ -83,7 +83,7 @@ export default function Hero() {
         </div>
 
         <div className={styles.wrapper}>
-          <motion.div
+          <motion.h2
             className={styles.socialLinks}
             initial={{
               y: 100,
@@ -94,19 +94,9 @@ export default function Hero() {
               transition: { delay: 0.5, duration: 1, ...transition },
             }}
           >
-            <a
-              href="https://www.linkedin.com/in/avidu-web-designer-from-sri-lanka/"
-              target="blank"
-            >
-              LinkedIn 🡥
-            </a>
-            <a href="https://www.behance.net/avidu" target="blank">
-              Behance 🡥
-            </a>
-            <a href="https://github.com/AviduDev" target="blank">
-              GitHub 🡥
-            </a>
-          </motion.div>
+          <span className={styles.bottomTitle}>website designer</span>
+          <span className={styles.bottomTitle}>front-end developer</span>
+          </motion.h2>
         </div>
 
        

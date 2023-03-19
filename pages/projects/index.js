@@ -41,19 +41,21 @@ export default function Projects({ projects }) {
     <main>
       <section className={styles.section}>
         <h1>works</h1>
+        {/* --------------------------PROJECTS------------------------- */}
         <ul className={styles.projectContainer}>
           {projects.map(({ id, title, mainImage, slug }) => (
             <li key={id} className={styles.project}>
-              
+              {/* --------------------IMAGE--------------------- */}
+              <div className={styles.imageContainer}>
                 <Image
-                className={styles.mainImage}
+                  className={styles.mainImage}
                   src={mainImage.url}
                   width={mainImage.width}
                   height={mainImage.height}
                   alt={title}
                 />
-              
-
+              </div>
+              {/* -----------------------TITLE------------------ */}
               <Link className={styles.projectTitle} href={`/projects/${slug}`}>
                 <h2 layoutId={id}>{title}</h2>
               </Link>

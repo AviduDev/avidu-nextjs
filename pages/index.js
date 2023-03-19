@@ -15,6 +15,7 @@ import Services from "@/components/Services";
 import Process from "@/components/Process";
 import Faqs from "@/components/Faqs";
 import Contact from "@/components/Contact";
+import Circle from "@/components/Circle";
 
 const hygraph = new GraphQLClient(
   "https://eu-central-1-shared-euc1-02.cdn.hygraph.com/content/cl9s32g1q2oun01td822bh5s6/master"
@@ -63,7 +64,9 @@ export default function Home({ projects }) {
         <Description />
         <Services />
         <Process />
+
         {/* ---------------------------------------------- */}
+
         <div className={styles.projectContainer}>
           <h2 className={styles.workTtl}>work</h2>
           <ul className={styles.projectContainer}>
@@ -87,7 +90,9 @@ export default function Home({ projects }) {
             ))}
           </ul>
         </div>
+
         {/* ------------------------------------------ */}
+        
         <Faqs />
         <Contact id="contact" />
       </main>

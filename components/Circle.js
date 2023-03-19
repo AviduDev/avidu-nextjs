@@ -1,146 +1,37 @@
 import styles from "./Circle.module.scss";
 import Script from "next/script";
-import { gsap } from "gsap";
+import { gsap, ScrollTrigger } from "gsap";
 import { delay, motion } from "framer-motion";
-
-const transition = { duration: 1.4, ease: [0.6, 0.01, -0.05, 0.9] };
-
-const firstName = {
-  initial: {
-    y: 0,
-  },
-  animate: {
-    y: 0,
-    transition: {
-      delayChildren: 0.6,
-      staggerChildren: 0.04,
-      staggerDirection: -1,
-    },
-  },
-};
-
-const lastName = {
-  initial: {
-    y: 0,
-  },
-  animate: {
-    y: 0,
-    transition: {
-      delayChildren: 0.6,
-      staggerChildren: 0.04,
-      staggerDirection: 1,
-    },
-  },
-};
-
-const letter = {
-  initial: {
-    y: 400,
-  },
-  animate: {
-    y: 0,
-    transition: { duration: 1, ...transition },
-  },
-};
+import { useLayoutEffect, useRef } from "react";
 
 export default function Circle() {
+  const root = useRef();
+
+  useLayoutEffect(() => {
+    let ctx = gsap.context(() => {
+      // all your animations go in here...
+      gsap.to(".title", {
+        backgroundPositionX: "0%",
+     
+        scrollTrigger: {
+          trigger: ".title",
+          scrub: 1,
+          start: "top center",
+          end: "bottom top",
+        },
+      });
+    }, root); // <- scopes all selector text to the root element
+
+    return () => ctx.revert();
+  }, []);
+
   return (
-    <>
-      <motion.div className={styles.model}>
-        <motion.span
-          className={styles.first}
-          initial={{
-            y: 0,
-          }}
-          animate={{
-            y: 0,
-            transition: {
-              delayChildren: 0.6,
-              staggerChildren: 0.04,
-              staggerDirection: -1,
-            },
-          }}
-        >
-          <motion.span
-            initial={{
-              y: 400,
-            }}
-            animate={{
-              y: 0,
-              transition: { duration: 1, ...transition },
-            }}
-          >
-            Y
-          </motion.span>
-          <motion.span
-            initial={{
-              y: 400,
-            }}
-            animate={{
-              y: 0,
-              transition: { delay: 0.1, duration: 1, ...transition },
-            }}
-          >
-            a
-          </motion.span>
-          <motion.span
-            initial={{
-              y: 400,
-            }}
-            animate={{
-              y: 0,
-              transition: { delay: 0.2, duration: 1, ...transition },
-            }}
-          >
-            s
-          </motion.span>
-          <motion.span
-            initial={{
-              y: 400,
-            }}
-            animate={{
-              y: 0,
-              transition: { delay: 0.3, duration: 1, ...transition },
-            }}
-          >
-            m
-          </motion.span>
-          <motion.span
-            initial={{
-              y: 400,
-            }}
-            animate={{
-              y: 0,
-              transition: { delay: 0.4, duration: 1, ...transition },
-            }}
-          >
-            e
-          </motion.span>
-          <motion.span
-            initial={{
-              y: 400,
-            }}
-            animate={{
-              y: 0,
-              transition: { delay: 0.5, duration: 1, ...transition },
-            }}
-          >
-            e
-          </motion.span>
-          <motion.span
-            initial={{
-              y: 400,
-            }}
-            delay={{}}
-            animate={{
-              y: 0,
-              transition: { delay: 0.6, duration: 1, ...transition },
-            }}
-          >
-            n
-          </motion.span>
-        </motion.span>
-      </motion.div>
-    </>
+    <section ref={root} className={styles.section}>
+      <div>
+        <h1 className={styles.title}>
+          Lorem ipsum dolor sit amet consectetur adipisicing elit. At, atque.
+        </h1>
+      </div>
+    </section>
   );
 }
