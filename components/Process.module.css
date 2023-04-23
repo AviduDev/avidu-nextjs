@@ -1,4 +1,4 @@
-.sectioin {
+.section {
   background-color: antiquewhite;
   border-radius: 3vw;
   padding: 10vw 0 10vw 0;
@@ -10,6 +10,10 @@
   
 }
 
+.processContainer {
+  position: relative;
+}
+
 .process {
   gap: 1vw;
   display: grid;
@@ -17,6 +21,8 @@
   min-height: 50vw;
   width: 100%;
   padding: 3vw;
+  position: sticky;
+  top: 0;
 }
 
 .pcsTtl {

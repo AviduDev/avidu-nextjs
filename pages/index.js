@@ -16,6 +16,7 @@ import Process from "@/components/Process";
 import Faqs from "@/components/Faqs";
 import Contact from "@/components/Contact";
 import Circle from "@/components/Circle";
+import Notice from "@/components/Notice";
 
 const hygraph = new GraphQLClient(
   "https://eu-central-1-shared-euc1-02.cdn.hygraph.com/content/cl9s32g1q2oun01td822bh5s6/master"
@@ -59,6 +60,7 @@ export default function Home({ projects }) {
         <link rel="icon" href="/favicon.ico" />
       </Head>
       <main className={styles.main}>
+        <Notice />
         <Hero />
         <Marquee />
         <Description />

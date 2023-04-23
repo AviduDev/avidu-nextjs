@@ -1,0 +1,9 @@
+.section {
+    color: antiquewhite;
+}
+
+.div {
+    display: flex;
+    width: 100%;
+    justify-content: space-around;
+}

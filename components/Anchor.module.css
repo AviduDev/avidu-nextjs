@@ -1,0 +1,58 @@
+.link {
+  height: 30px;
+  align-items: center;
+  color: antiquewhite;
+  text-decoration: none;
+  display: flex;
+}
+
+/* Hide extra text */
+.mask {
+  position: relative;
+  padding: 0;
+  height: 20px;
+
+  /*  Remove overflow to see how it works　:) */
+  overflow: hidden;
+}
+
+.linkContainer {
+  transition: transform 0.4s ease;
+}
+
+.title {
+  display: block;
+
+  /*  Set same font-size and line height  */
+  font-size: inherit;
+  line-height: 20px;
+
+  transition: transform 0.4s ease;
+}
+
+#linkTitle1 {
+  transform-origin: right center;
+}
+
+#linkTitle2 {
+  transform-origin: left center;
+  transform: rotate(20deg);
+}
+
+
+
+/* Hover Action*/
+
+/* Move up two texts (20px = font-size) */
+.link:hover .linkContainer {
+  transform: translateY(-20px);
+}
+
+/* Rotate texts a little bit */
+.link:hover #linkTitle1 {
+  transform: rotate(20deg);
+}
+
+.link:hover #linkTitle2 {
+  transform: rotate(0);
+}

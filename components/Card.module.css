@@ -1,0 +1,9 @@
+.card {
+	height: 50vh;
+	position: sticky;
+	top: 0;
+}
+
+#c1 {
+	background-color: #fdcaca;
+}

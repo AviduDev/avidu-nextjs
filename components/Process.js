@@ -2,7 +2,7 @@ import styles from "./Process.module.css";
 
 export default function Process() {
   return (
-    <section className={styles.sectioin}>
+    <section className={styles.section}>
       <h2>process</h2>
       <ul className={styles.processContainer}>
 
