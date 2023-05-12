@@ -66,7 +66,7 @@ export default function Process() {
         <li className={styles.process}>
           <div className={styles.pcsTtl}>
             <p className={styles.number}>5</p>
-            <h3 className={styles.title}>deoploy</h3>
+            <h3 className={styles.title}>deploy</h3>
           </div>
           <div className={styles.pcsDsc}>
             Lorem, ipsum dolor sit amet consectetur adipisicing elit. Obcaecati,
